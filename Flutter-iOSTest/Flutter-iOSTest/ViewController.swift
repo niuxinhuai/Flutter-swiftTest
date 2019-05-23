@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @objc func didSelectButtonClick() {
         let flutter = FlutterViewController.init()
         flutter.navigationItem.title = "Flutter-iOSTest-Demo"
+        flutter.loadDefaultSplashScreenView()
         // 要与main.dart中一致
         let channelName = "com.pages.flutter.iOSTest.demo"
         let messageChannel = FlutterMethodChannel.init(name: channelName, binaryMessenger: flutter)
@@ -50,7 +51,6 @@ class ViewController: UIViewController {
             print("end of flutter present")
         }
 //        self.navigationController?.pushViewController(flutter, animated: true)
-        
     }
     
     lazy var button : UIButton = {
@@ -61,9 +61,6 @@ class ViewController: UIViewController {
         object.addTarget(self, action: #selector(didSelectButtonClick), for: .touchUpInside)
         return object
     }()
-
-    
-
 
 }
 
