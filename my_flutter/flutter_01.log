@@ -1,0 +1,81 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color attach --machine --device-id=91F1672A-C0BE-43E4-A928-EB8C60B8EE98 lib/Application/main.dart
+
+## exception
+
+NoSuchMethodError: NoSuchMethodError: The getter 'port' was called on null.
+Receiver: null
+Tried calling: port
+
+```
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:50:5)
+#1      AttachCommand.runCommand (package:flutter_tools/src/commands/attach.dart:219:78)
+<asynchronous suspension>
+#2      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:559:18)
+#3      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#4      _rootRunUnary (dart:async/zone.dart:1132:38)
+#5      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#6      _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#7      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#8      Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#9      Future._complete (dart:async/future_impl.dart:473:7)
+#10     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#11     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#12     _rootRun (dart:async/zone.dart:1124:13)
+#13     _CustomZone.run (dart:async/zone.dart:1021:19)
+#14     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#15     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#16     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#17     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#18     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.5.4-hotfix.2, on Mac OS X 10.14.4 18E226, locale zh-Hans-CN)
+    • Flutter version 1.5.4-hotfix.2 at /Users/niuxinhuai/Desktop/flutter
+    • Framework revision 7a4c33425d (4 weeks ago), 2019-04-29 11:05:24 -0700
+    • Engine revision 52c7a1e849
+    • Dart version 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    • Android SDK at /Users/niuxinhuai/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-28, build-tools 28.0.3
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1136-b06)
+    ✗ Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[!] iOS toolchain - develop for iOS devices (Xcode 10.2.1)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 10.2.1, Build version 10E1001
+    ✗ Verify that all connected devices have been paired with this computer in Xcode.
+      If all devices have been paired, libimobiledevice and ideviceinstaller may require updating.
+      To update with Brew, run:
+        brew update
+        brew uninstall --ignore-dependencies libimobiledevice
+        brew uninstall --ignore-dependencies usbmuxd
+        brew install --HEAD usbmuxd
+        brew unlink usbmuxd
+        brew link usbmuxd
+        brew install --HEAD libimobiledevice
+        brew install ideviceinstaller
+    • ios-deploy 1.9.4
+    • CocoaPods version 1.5.3
+
+[✓] Android Studio (version 3.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 31.3.1
+    • Dart plugin version 181.5656
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1136-b06)
+
+[✓] Connected device (2 available)
+    • iPhone Xs Max • 2FE1B73F-D470-44FB-982B-6EEE5839F684 • ios • com.apple.CoreSimulator.SimRuntime.iOS-12-2 (simulator)
+    • iPhone Xʀ     • 91F1672A-C0BE-43E4-A928-EB8C60B8EE98 • ios • com.apple.CoreSimulator.SimRuntime.iOS-12-2 (simulator)
+
+! Doctor found issues in 2 categories.
+```
