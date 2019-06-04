@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter/Const/Config.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:my_flutter/Const/Const.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class Test extends StatefulWidget {
   @override
@@ -40,33 +41,10 @@ class _TestState extends State<Test> {
   /* 顶部三等分  */
   _getBody() {
     return _getListView();
-//    return ListView(
-//      children: <Widget>[
-//        Container(
-//          height: 100,
-//          child: _getRow(),
-//        ),
-//        Container(
-//          height: 400,
-//          child: _getContainerView(),
-//        ),
-//        Container(
-//          height: 300,
-//          child: _getGridView(),
-//        ),
-//        Container(
-//          height: 300,
-//          child: _getSignleChildScrollView(),
-//        )
-//
-//      ],
-//
-//    );
-
   }
 
   ListView _getListView() => ListView.builder(
-      itemCount: 5,
+      itemCount: 6,
       shrinkWrap: true,
       itemBuilder: (BuildContext context,int position) {
 
@@ -89,8 +67,31 @@ class _TestState extends State<Test> {
       return _getChildGridView();
     } else if (i == 3) {
       return _getSignleChildScrollView();
+    } else if (i == 4) {
+      return _getBRow();
     }
-    return _getBRow();
+    return _getStaggeredGridView();
+  }
+
+  _getStaggeredGridView() {
+    return new StaggeredGridView.countBuilder(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      crossAxisCount: 4,
+      itemCount: 8,
+      itemBuilder: (context,index) => new Container(
+        color: Config.randomColor(),
+        child: Center(
+          child: CircleAvatar(
+            backgroundColor: Config.color_white_a80,
+            child: Text('${index}'),
+          ),
+        ),
+      ),
+      staggeredTileBuilder: (index) => new StaggeredTile.count(2, index.isEven ? 2 : 1),
+      mainAxisSpacing: 4,
+      crossAxisSpacing: 4,
+    );
   }
 
   _getRow() {
@@ -177,12 +178,15 @@ class _TestState extends State<Test> {
   Widget _getChildGridView() {
     return new GridView (
       shrinkWrap: true,
+      physics: new NeverScrollableScrollPhysics(), //禁止滑动
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
       ),
       children: <Widget>[
         IconButton(icon: Icon(Icons.add,color: Config.colorPrimary,), onPressed: _addClick),
-
+        UnconstrainedBox(
+          child: Icon(Icons.ac_unit,size: 30,),
+        ),
         Icon(Icons.add_alarm),
         Icon(Icons.add_a_photo),
         Icon(Icons.add_circle),
@@ -202,6 +206,7 @@ class _TestState extends State<Test> {
   _getSignleChildScrollView() {
     return Scrollbar(
       child: SingleChildScrollView(
+//        physics: AlwaysScrollableScrollPhysics(),
         scrollDirection: Axis.vertical,
         child: Column(
           children: _getEle(),
