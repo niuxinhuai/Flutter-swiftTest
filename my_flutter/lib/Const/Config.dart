@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class Config {
   ///颜色
@@ -8,4 +9,12 @@ class Config {
   static Color color_black = Color(0xFF000000);
   static Color color_dark_gray = Color(0xFF6b6b6b);
   static Color color_white_a80 = Color(0xccffffff);
+
+  static Color randomColor() {
+    return Color.fromARGB(
+        255,
+        Random.secure().nextInt(255),
+        Random.secure().nextInt(255),
+        Random.secure().nextInt(255));
+  }
 }
