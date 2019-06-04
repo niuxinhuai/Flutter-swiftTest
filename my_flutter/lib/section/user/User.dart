@@ -55,6 +55,7 @@ class _UserState extends State<User> with AutomaticKeepAliveClientMixin {
     return GestureDetector(
       child: Padding(
         padding: EdgeInsets.all(10.0),
+        
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(3.0)),
@@ -79,9 +80,10 @@ class _UserState extends State<User> with AutomaticKeepAliveClientMixin {
     return Column(
       children: <Widget>[
         Text(
+          
           "${widgets[i]}",
           style: TextStyle(
-            color: Colors.red,
+            color: Theme.of(context).primaryColor,
             fontSize: 13,
           ),
         ),
