@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter/Const/Config.dart';
+import 'package:my_flutter/Widget/GenericWidget/GenericButton.dart';
 
 class Read extends StatefulWidget {
   @override
@@ -43,6 +44,17 @@ class _ReadState extends State<Read> with AutomaticKeepAliveClientMixin {
   }
 
   @override
+  void didUpdateWidget(Read oldWidget) {
+    // TODO: implement didUpdateWidget
+    print('来了');
+    if (oldWidget != widget) {
+      print('走了这里了');
+      super.didUpdateWidget(oldWidget);
+    }
+    
+  }
+
+  @override
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
@@ -65,9 +77,9 @@ class _ReadState extends State<Read> with AutomaticKeepAliveClientMixin {
       child: NotificationListener<ScrollNotification>(
         onNotification: (ScrollNotification notifier) {
           double progress = notifier.metrics.pixels / notifier.metrics.maxScrollExtent;
-          setState(() {
-            _progress = '${(progress * 100).toInt()}%';
-          });
+//          setState(() {
+//            _progress = '${(progress * 100).toInt()}%';
+//          });
         },
         child: _getCustomScroll(),
       )
@@ -82,9 +94,10 @@ class _ReadState extends State<Read> with AutomaticKeepAliveClientMixin {
         SliverAppBar(
           expandedHeight: 250,
           pinned: true,
+          title: const Text('阅读'),
           leading: IconButton(icon: Icon(Icons.list), onPressed: () { print('点击了list'); }),
           flexibleSpace: FlexibleSpaceBar(
-            title: const Text('阅读'),
+//            title: const Text('阅读'),
             background: new Image.asset('AssetFile/other/m8.jpg',fit: BoxFit.cover,),
           ),
           actions: <Widget>[
@@ -97,7 +110,6 @@ class _ReadState extends State<Read> with AutomaticKeepAliveClientMixin {
           ],
         ),
         SliverPadding(
-          
           padding: const EdgeInsets.all(8),
           sliver: new SliverGrid(
             gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
@@ -108,19 +120,18 @@ class _ReadState extends State<Read> with AutomaticKeepAliveClientMixin {
             ),
             delegate: new SliverChildBuilderDelegate( (context, index) {
               // 创建childwidget
-              return new Container(
-                decoration: BoxDecoration(
-                  color: Config.randomColor(),
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black54,
-                          offset: Offset(2, 2),
-                          blurRadius: 6
-                      )
-                    ]
-                ),
-                alignment: Alignment.center,
+              return GenericButton(
+                color: Config.randomColor(),
+                gradientColors: [Config.randomColor(),Config.randomColor()],
+                radius: 30,
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black54,
+                      offset: Offset(2, 2),
+                      blurRadius: 6
+                  )
+                ],
+                onTap: () { print('name: grid item ${index + 1}'); },
                 child: Text('grid item ${index + 1}'),
               );
             }, childCount: 20),
