@@ -234,7 +234,10 @@ class _AboutState extends State<About> with AutomaticKeepAliveClientMixin,Single
   _getContainer() {
     return Container(
       margin: EdgeInsets.only(top: 10), // margin/padding设置为不同对象，警告
-      constraints: BoxConstraints.tightFor(width: 100,height: 50), // 指定大小,width/height将优先
+      constraints: BoxConstraints.loose(Size(100, 50)),
+//      constraints: BoxConstraints.tightFor(width: 100,height: 50), // 指定大小,width/height将受影响
+      width: 200,
+      height: 100,
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [Config.randomColor(),Config.randomColor(),Config.randomColor()]),
           borderRadius: BorderRadius.circular(10),

@@ -31,12 +31,15 @@ class _UserState extends State<User> with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("1234"),
-        ),
-        body: getBody()
+    return Container(
+      child: getBody(),
     );
+//    return Scaffold(
+//        appBar: AppBar(
+//          title: Text("1234"),
+//        ),
+//        body: getBody()
+//    );
   }
 
   getBody() {
@@ -89,9 +92,11 @@ class _UserState extends State<User> with AutomaticKeepAliveClientMixin {
         ),
         MaterialButton(
           color: Colors.cyan,
-          child: Text(_nativeCallBackValue),
+          child: Text('123qwertt'),// _nativeCallBackValue
           onPressed: () {
-            _communicateFunction('flutter开始传值');
+//            _communicateFunction('flutter开始传值');
+          print(context);
+            Scaffold.of(context).showSnackBar( new SnackBar(content: new Text('Item dismissible')) );
             setState(() {});
           },
         ),

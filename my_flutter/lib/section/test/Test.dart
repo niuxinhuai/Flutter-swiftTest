@@ -3,6 +3,7 @@ import 'package:my_flutter/Const/Config.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:my_flutter/Const/Const.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:my_flutter/Widget/EventObserverable.dart';
 
 class Test extends StatefulWidget {
   @override
@@ -18,6 +19,12 @@ class _TestState extends State<Test> {
     // TODO: implement initState
     super.initState();
     print("加载了练习页");
+//    EventObserverable.singleton.add('notifierName', (arg) {
+//      setState(() {
+//
+//      });
+//      print('监听拿到的数据是${arg}');
+//    });
   }
 
   @override
