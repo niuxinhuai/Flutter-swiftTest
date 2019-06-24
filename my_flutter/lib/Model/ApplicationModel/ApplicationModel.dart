@@ -5,10 +5,11 @@ import 'package:my_flutter/section/test/Test.dart';
 import 'package:my_flutter/section/about/About.dart';
 import 'package:my_flutter/section/user/User.dart';
 import 'package:my_flutter/Const/Config.dart';
+import 'package:fish_redux/fish_redux.dart';
 
 class ApplicationModel {
 
-  static final tabControllers = [Homepage(), Read(), Test(), About(), User()];
+  static final tabControllers = [Homepage(), Read(), Test().buildPage(null), About(), User()];
   static final tabsTitle = ['首页','阅读','练习','简言','我的'];
   static final tabsIcon = ['AssetFile/tabbar/indexImage.png','AssetFile/tabbar/mainImage.png','AssetFile/tabbar/ownerImage.png','AssetFile/tabbar/secondImage.png','AssetFile/tabbar/userImage.png'];
   static final tabSelectIcon = ['AssetFile/tabbar/indexSelectImage.png','AssetFile/tabbar/mainSelectImage.png','AssetFile/tabbar/ownerSelectImage.png','AssetFile/tabbar/secondSelectImage.png','AssetFile/tabbar/userSelectImage.png'];

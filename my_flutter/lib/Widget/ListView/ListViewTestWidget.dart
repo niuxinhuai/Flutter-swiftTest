@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:math';
 import 'package:english_words/english_words.dart';
 import 'package:my_flutter/Const/Toast.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 class ListViewTestWidget extends StatefulWidget {
   final bool showAppBars;
   ListViewTestWidget({
@@ -188,7 +189,8 @@ class _ListViewTestWidgetState extends State<ListViewTestWidget> with AutomaticK
                 child: SizedBox(
                   height: 24,
                   width: 24,
-                  child: CircularProgressIndicator(strokeWidth: 2),
+                  child: SpinKitRotatingCircle(color: Colors.deepPurpleAccent,),
+//                  child: CircularProgressIndicator(strokeWidth: 2),
                 ),
               );
             } else {

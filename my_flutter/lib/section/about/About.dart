@@ -5,6 +5,8 @@ import 'dart:async';
 import 'dart:math';
 import 'package:my_flutter/Expand/Router/Routers.dart';
 import 'package:my_flutter/Widget/ListView/ListViewTestWidget.dart';
+import 'package:my_flutter/Widget/ListView/OtherListViewWidget.dart';
+import 'package:my_flutter/Widget/ListView/TestViewWidget.dart';
 
 class About extends StatefulWidget {
   @override
@@ -14,7 +16,7 @@ class About extends StatefulWidget {
 class _AboutState extends State<About> with AutomaticKeepAliveClientMixin,SingleTickerProviderStateMixin {
 
   TabController _tabController; //
-  List tabs = ['头条','视频','综艺'];
+  List tabs = ['头条','视频','综艺','练习'];
   bool _switchSelected=true; //维护单选开关状态
   bool _checkboxSelected=true;//维护复选框状态
   List<String> wrapList = List<String>.generate(20, (i) => 'Wrap ${i + 1} ${i * 1000}');
@@ -42,7 +44,7 @@ class _AboutState extends State<About> with AutomaticKeepAliveClientMixin,Single
 
   @override
   Widget build(BuildContext context) {
-    flowBoxItemWidth = (Const.screenWidth(context) - (10 * 4))/3;
+    flowBoxItemWidth = (Const.screenWidth(context) - (20 * 4))/3;
     super.build(context);
     return Scaffold(
       appBar: AppBar(
@@ -82,11 +84,10 @@ class _AboutState extends State<About> with AutomaticKeepAliveClientMixin,Single
             return ListViewTestWidget(
               showAppBars: false,
             );
+          } else if (e == '综艺') {
+            return OtherListViewWidget();
           }
-          return Container(
-            alignment: Alignment.center,
-            child: Text(e, textScaleFactor: 5),
-          );
+          return TestViewWidget();
         }).toList(),
       ),
     );
@@ -103,7 +104,6 @@ class _AboutState extends State<About> with AutomaticKeepAliveClientMixin,Single
         }
         return _getFlowBoxConstraints();
       },
-
     );
   }
 
@@ -333,14 +333,11 @@ class _AboutState extends State<About> with AutomaticKeepAliveClientMixin,Single
       delegate: TestFlowDelegate(
         itemWidth: flowBoxItemWidth,
         topScale: 10,
-        leftAndRightScale: 10
+        leftAndRightScale: 20
       ),
       children: flowList.map((rh) {
-        return Container(
-          width: flowBoxItemWidth,
-          height: flowBoxItemWidth,
-          color: Config.randomColor(),
-          child: Text(rh),
+        return UnconstrainedBox(
+          child: Container(width: flowBoxItemWidth, height: flowBoxItemWidth, color: Config.randomColor(),child: Text(rh),),
         );
       }).toList(),
     );
@@ -364,11 +361,12 @@ class TestFlowDelegate extends FlowDelegate {
     var x = leftAndRightScale;
     var y = topScale;
     // 计算每个子widget的位置
+    itemWidth = 80.0;
     for (int i = 0; i < context.childCount; i ++) {
       x = leftAndRightScale + (itemWidth + leftAndRightScale)*(i%3);
       y = topScale + (itemWidth + topScale)*(i~/3);
       print('x:${x} y:${y} iw:${i%3} ih: ${i~/3}');
-      context.paintChild(i, transform: new Matrix4.translationValues(x, y, 0));
+      context.paintChild(i, transform: new Matrix4.translationValues(x, y, 0.0));
     }
   }
 

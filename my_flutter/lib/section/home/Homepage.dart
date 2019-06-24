@@ -49,19 +49,20 @@ class _HomepageState extends State<Homepage> with AutomaticKeepAliveClientMixin,
       begin: 0.0,
       end: 100.0,
     ).animate(animationController);
+    animationController.forward();
 //    ..addListener(() {
 //      setState(() {});
 //    });
-    animation.addStatusListener((status) {
-//      if (status == AnimationStatus.completed) {
-//        // 动画执行结束时，反向执行动画
-//        animationController.reverse();
-//      } else if (status == AnimationStatus.dismissed) {
-//        // 动画恢复到初始状态时执行动画(正向)
-//        animationController.forward();
-//      }
-    });
-    animationController.forward();
+//    animation.addStatusListener((status) {
+////      if (status == AnimationStatus.completed) {
+////        // 动画执行结束时，反向执行动画
+////        animationController.reverse();
+////      } else if (status == AnimationStatus.dismissed) {
+////        // 动画恢复到初始状态时执行动画(正向)
+////        animationController.forward();
+////      }
+//    });
+
 
   }
 
@@ -77,10 +78,11 @@ class _HomepageState extends State<Homepage> with AutomaticKeepAliveClientMixin,
 
   @override
   Widget build(BuildContext context) {
+
     super.build(context);
     return new Scaffold(
       appBar: new AppBar(
-        leading: IconButton(icon: Icon(Icons.message), onPressed: () { print('点击了信息'); }),
+//        leading: IconButton(icon: Icon(Icons.message), onPressed: () { print('点击了信息'); }),
         title: Text('首页'),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.access_alarm), onPressed: () { print('点击了闹钟'); }),
@@ -92,10 +94,12 @@ class _HomepageState extends State<Homepage> with AutomaticKeepAliveClientMixin,
   }
   
   _getColumn() {
+    print('刷新');
 
     return ListView.builder(
       itemCount: 1,
       itemBuilder: (cx,position) {
+        print('context刷新');
         return Material(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -106,9 +110,10 @@ class _HomepageState extends State<Homepage> with AutomaticKeepAliveClientMixin,
               _getMoveView(),
               SizedBox(height: 20),
               _getRichText(),
+              _getPaint(),
               SizedBox(height: 100, child: _getAnimationView(),),
               SizedBox(height: 20,),
-              _getPaint(),
+//              ,
             ],
           ),
         );
@@ -124,7 +129,7 @@ class _HomepageState extends State<Homepage> with AutomaticKeepAliveClientMixin,
       child: GestureDetector(
         child: Container(
           alignment: Alignment.center,
-          color: Colors.cyan,
+          color: Config.randomColor(),
           constraints: BoxConstraints.tightFor(width: 300,height: 150),
           child: Text(_event?.toString() ?? '',style: TextStyle(color: Colors.white),),
         ),

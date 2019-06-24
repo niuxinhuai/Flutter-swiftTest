@@ -8,7 +8,7 @@ class PainterLine extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    print('canvas画布大小是${size}');
+//    print('canvas画布大小是${size}');
     double paintWidth = size.width/15;
     double paintHeight = size.height/15;
     
@@ -97,6 +97,7 @@ class PainterLine extends CustomPainter {
   //在实际场景中正确利用此回调可以避免重绘开销
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
-    return oldDelegate != this;
+//    return oldDelegate != this;
+    return false;
   }
 }
