@@ -2,35 +2,44 @@ PODS:
   - Flutter (1.0.0)
   - FlutterPluginRegistrant (0.0.1):
     - Flutter
-    - path_provider
-    - shared_preferences
-  - path_provider (0.0.1):
+    - sqflite
+  - sqflite (0.0.1):
     - Flutter
-  - shared_preferences (0.0.1):
-    - Flutter
+    - WCDB.swift (~> 1.0.8.2)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDB.swift (1.0.8.2):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
 
 DEPENDENCIES:
   - Flutter (from `../my_flutter/.ios/Flutter/engine`)
   - FlutterPluginRegistrant (from `../my_flutter/.ios/Flutter/FlutterPluginRegistrant`)
-  - path_provider (from `../my_flutter/.ios/Flutter/.symlinks/path_provider/ios`)
-  - shared_preferences (from `../my_flutter/.ios/Flutter/.symlinks/shared_preferences/ios`)
+  - sqflite (from `../my_flutter/.ios/Flutter/.symlinks/sqflite/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SQLiteRepairKit
+    - WCDB.swift
+    - WCDBOptimizedSQLCipher
 
 EXTERNAL SOURCES:
   Flutter:
     :path: "../my_flutter/.ios/Flutter/engine"
   FlutterPluginRegistrant:
     :path: "../my_flutter/.ios/Flutter/FlutterPluginRegistrant"
-  path_provider:
-    :path: "../my_flutter/.ios/Flutter/.symlinks/path_provider/ios"
-  shared_preferences:
-    :path: "../my_flutter/.ios/Flutter/.symlinks/shared_preferences/ios"
+  sqflite:
+    :path: "../my_flutter/.ios/Flutter/.symlinks/sqflite/ios"
 
 SPEC CHECKSUMS:
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  FlutterPluginRegistrant: b8f535d70b1dd53efcc90df50798b23647d998d8
-  path_provider: 09407919825bfe3c2deae39453b7a5b44f467873
-  shared_preferences: 5a1d487c427ee18fcd3ea1f2a131569481834b53
+  FlutterPluginRegistrant: 5458b93030c1460b9cb1baaf203eddfb792c1665
+  sqflite: 5886fb0dbb6ba78c32c9af1d127162314ef66da1
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
-PODFILE CHECKSUM: a7237e8577b02e16b4239e1389b37ee0148ed311
+PODFILE CHECKSUM: 811b0a25df776fba262bb65d3eabb42e02b15630
 
 COCOAPODS: 1.5.3
