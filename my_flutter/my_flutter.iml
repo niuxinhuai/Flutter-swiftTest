@@ -19,6 +19,12 @@
       <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/shared_preferences/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/shared_preferences/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/shared_preferences/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/sqflite/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/sqflite/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/sqflite/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/sqflite/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/sqflite/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.ios/Flutter/.symlinks/sqflite/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
