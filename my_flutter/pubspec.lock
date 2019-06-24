@@ -153,9 +153,9 @@ packages:
     dependency: "direct main"
     description:
       path: sqflite
-      ref: "889a156"
-      resolved-ref: "889a156e0057a4604b74b2b00054b67ada539996"
-      url: "https://www.github.com/davidmartos96/sqflite_sqlcipher.git"
+      ref: HEAD
+      resolved-ref: ff080418c7f6b633bfe700d4559d1115141b13ac
+      url: "https://www.github.com/hurshi/sqflite.git"
     source: git
     version: "1.1.5"
   stack_trace:

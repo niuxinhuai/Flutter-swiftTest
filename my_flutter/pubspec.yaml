@@ -37,9 +37,9 @@ dependencies:
   dio: ^2.1.7
   sqflite:
       git:
-        url: https://www.github.com/davidmartos96/sqflite_sqlcipher.git
+        url: https://www.github.com/hurshi/sqflite.git
         path: sqflite
-        ref: 889a156
+
 #  sqflite:
 #    path: /Users/niuxinhuai/Desktop/sqflite/sqflite/
 
