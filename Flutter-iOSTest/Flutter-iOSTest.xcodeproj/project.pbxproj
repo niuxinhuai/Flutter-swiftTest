@@ -8,25 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0DEBCD64A4477140216F9F86 /* Pods_Flutter_iOSTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A116FA60BA2CEC1A351FB41 /* Pods_Flutter_iOSTestUITests.framework */; };
-		2D2DBD4422B8BC53008C6867 /* DWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DBD4322B8BC53008C6867 /* DWord.swift */; };
 		2D49FF2C2294F824003FC130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D49FF2B2294F824003FC130 /* AppDelegate.swift */; };
 		2D49FF2E2294F824003FC130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D49FF2D2294F824003FC130 /* ViewController.swift */; };
 		2D49FF312294F824003FC130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D49FF2F2294F824003FC130 /* Main.storyboard */; };
 		2D49FF332294F825003FC130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D49FF322294F825003FC130 /* Assets.xcassets */; };
 		2D49FF362294F825003FC130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D49FF342294F825003FC130 /* LaunchScreen.storyboard */; };
 		2D787F0E22B33C3E00288BE0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D787F0D22B33C3E00288BE0 /* SecondViewController.swift */; };
-		2D803B8622B7787000DD2F4D /* sqflite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D803B8522B7787000DD2F4D /* sqflite.framework */; };
-		2D94A2C622B23C8D00A9F79E /* DBMigrationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2BC22B23C8D00A9F79E /* DBMigrationsHelper.swift */; };
-		2D94A2C722B23C8D00A9F79E /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2BD22B23C8D00A9F79E /* Expressions.swift */; };
-		2D94A2C822B23C8D00A9F79E /* DBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2BE22B23C8D00A9F79E /* DBConfig.swift */; };
-		2D94A2C922B23C8D00A9F79E /* DBOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2BF22B23C8D00A9F79E /* DBOpener.swift */; };
-		2D94A2CA22B23C8D00A9F79E /* DBUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2C022B23C8D00A9F79E /* DBUpdate.swift */; };
-		2D94A2CC22B23C8D00A9F79E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2C222B23C8D00A9F79E /* DBHelper.swift */; };
-		2D94A2CD22B23C8D00A9F79E /* DBFileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2C322B23C8D00A9F79E /* DBFileUtil.swift */; };
-		2D94A2CE22B23C8D00A9F79E /* grapes_190419_encrypted.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2D94A2C422B23C8D00A9F79E /* grapes_190419_encrypted.sqlite */; };
 		2D94A2F822B23D4900A9F79E /* ZMTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2D122B23D4900A9F79E /* ZMTabModel.swift */; };
 		2D94A31D22B23D4900A9F79E /* DBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A2F722B23D4900A9F79E /* DBaseModel.swift */; };
-		2D94A31F22B23E5500A9F79E /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94A31E22B23E5500A9F79E /* FileUtil.swift */; };
 		3A21B3A6E5FBCCCA6C27FBD1 /* Pods_Flutter_iOSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737249228316538C8C0D3254 /* Pods_Flutter_iOSTest.framework */; };
 		60AF93CFAB01D211BFF4D01D /* Pods_Flutter_iOSTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1785329A987005B6025EDED /* Pods_Flutter_iOSTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -49,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D2DBD4322B8BC53008C6867 /* DWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DWord.swift; sourceTree = "<group>"; };
 		2D2DBE5B22B8D065008C6867 /* WCDBSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WCDBSwift.framework; path = ../../../../WCDBSwift.framework; sourceTree = "<group>"; };
 		2D49FF282294F824003FC130 /* Flutter-iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flutter-iOSTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D49FF2B2294F824003FC130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,18 +52,8 @@
 		2D787F5B22B4D7E800288BE0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2D787F5D22B4D8C700288BE0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2D803B8522B7787000DD2F4D /* sqflite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = sqflite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D94A2BC22B23C8D00A9F79E /* DBMigrationsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBMigrationsHelper.swift; sourceTree = "<group>"; };
-		2D94A2BD22B23C8D00A9F79E /* Expressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expressions.swift; sourceTree = "<group>"; };
-		2D94A2BE22B23C8D00A9F79E /* DBConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBConfig.swift; sourceTree = "<group>"; };
-		2D94A2BF22B23C8D00A9F79E /* DBOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBOpener.swift; sourceTree = "<group>"; };
-		2D94A2C022B23C8D00A9F79E /* DBUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBUpdate.swift; sourceTree = "<group>"; };
-		2D94A2C122B23C8D00A9F79E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D94A2C222B23C8D00A9F79E /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
-		2D94A2C322B23C8D00A9F79E /* DBFileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFileUtil.swift; sourceTree = "<group>"; };
-		2D94A2C422B23C8D00A9F79E /* grapes_190419_encrypted.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = grapes_190419_encrypted.sqlite; sourceTree = "<group>"; };
 		2D94A2D122B23D4900A9F79E /* ZMTabModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMTabModel.swift; sourceTree = "<group>"; };
 		2D94A2F722B23D4900A9F79E /* DBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBaseModel.swift; sourceTree = "<group>"; };
-		2D94A31E22B23E5500A9F79E /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		54799A1FA9A779DFF18B3B05 /* Pods-Flutter-iOSTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flutter-iOSTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flutter-iOSTestUITests/Pods-Flutter-iOSTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A116FA60BA2CEC1A351FB41 /* Pods_Flutter_iOSTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flutter_iOSTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737249228316538C8C0D3254 /* Pods_Flutter_iOSTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flutter_iOSTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D803B8622B7787000DD2F4D /* sqflite.framework in Frameworks */,
 				3A21B3A6E5FBCCCA6C27FBD1 /* Pods_Flutter_iOSTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,26 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				2D94A2D022B23D4900A9F79E /* Model */,
-				2D94A2BB22B23C8D00A9F79E /* Database */,
-				2D94A2C422B23C8D00A9F79E /* grapes_190419_encrypted.sqlite */,
 			);
 			path = db;
-			sourceTree = "<group>";
-		};
-		2D94A2BB22B23C8D00A9F79E /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				2D94A31E22B23E5500A9F79E /* FileUtil.swift */,
-				2D94A2BC22B23C8D00A9F79E /* DBMigrationsHelper.swift */,
-				2D94A2BD22B23C8D00A9F79E /* Expressions.swift */,
-				2D94A2BE22B23C8D00A9F79E /* DBConfig.swift */,
-				2D94A2BF22B23C8D00A9F79E /* DBOpener.swift */,
-				2D94A2C022B23C8D00A9F79E /* DBUpdate.swift */,
-				2D94A2C122B23C8D00A9F79E /* README.md */,
-				2D94A2C222B23C8D00A9F79E /* DBHelper.swift */,
-				2D94A2C322B23C8D00A9F79E /* DBFileUtil.swift */,
-			);
-			path = Database;
 			sourceTree = "<group>";
 		};
 		2D94A2D022B23D4900A9F79E /* Model */ = {
@@ -190,7 +149,6 @@
 		2D94A2D222B23D4900A9F79E /* DBModel */ = {
 			isa = PBXGroup;
 			children = (
-				2D2DBD4322B8BC53008C6867 /* DWord.swift */,
 			);
 			path = DBModel;
 			sourceTree = "<group>";
@@ -332,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D49FF362294F825003FC130 /* LaunchScreen.storyboard in Resources */,
-				2D94A2CE22B23C8D00A9F79E /* grapes_190419_encrypted.sqlite in Resources */,
 				2D49FF332294F825003FC130 /* Assets.xcassets in Resources */,
 				2D49FF312294F824003FC130 /* Main.storyboard in Resources */,
 			);
@@ -396,19 +353,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Flutter-iOSTest/Pods-Flutter-iOSTest-frameworks.sh",
 				"${PODS_ROOT}/../../my_flutter/.ios/Flutter/engine/Flutter.framework",
 				"${BUILT_PRODUCTS_DIR}/FlutterPluginRegistrant/FlutterPluginRegistrant.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLiteRepairKit/sqliterk.framework",
-				"${BUILT_PRODUCTS_DIR}/WCDB.swift/WCDBSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/WCDBOptimizedSQLCipher/sqlcipher.framework",
-				"${BUILT_PRODUCTS_DIR}/sqflite/sqflite.framework",
+				"${BUILT_PRODUCTS_DIR}/screen/screen.framework",
+				"${BUILT_PRODUCTS_DIR}/video_player/video_player.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlutterPluginRegistrant.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqliterk.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDBSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqlcipher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqflite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/screen.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/video_player.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,20 +411,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D94A2C822B23C8D00A9F79E /* DBConfig.swift in Sources */,
-				2D94A2C622B23C8D00A9F79E /* DBMigrationsHelper.swift in Sources */,
 				2D49FF2E2294F824003FC130 /* ViewController.swift in Sources */,
 				2D787F0E22B33C3E00288BE0 /* SecondViewController.swift in Sources */,
-				2D94A2CD22B23C8D00A9F79E /* DBFileUtil.swift in Sources */,
 				2D49FF2C2294F824003FC130 /* AppDelegate.swift in Sources */,
-				2D94A2C922B23C8D00A9F79E /* DBOpener.swift in Sources */,
 				2D94A31D22B23D4900A9F79E /* DBaseModel.swift in Sources */,
-				2D2DBD4422B8BC53008C6867 /* DWord.swift in Sources */,
 				2D94A2F822B23D4900A9F79E /* ZMTabModel.swift in Sources */,
-				2D94A2C722B23C8D00A9F79E /* Expressions.swift in Sources */,
-				2D94A2CA22B23C8D00A9F79E /* DBUpdate.swift in Sources */,
-				2D94A2CC22B23C8D00A9F79E /* DBHelper.swift in Sources */,
-				2D94A31F22B23E5500A9F79E /* FileUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,17 +605,12 @@
 					"$(inherited)",
 					"-iquote",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/FlutterPluginRegistrant/FlutterPluginRegistrant.framework/Headers\"",
-					"-iquote",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SQLiteRepairKit/sqliterk.framework/Headers\"",
-					"-iquote",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/sqflite/sqflite.framework/Headers\"",
 					"$(inherited)",
 					"-DSQLITE_HAS_CODEC",
 					"$(inherited)",
 					"-DSQLITE_HAS_CODEC",
 					"-DSQLITE_TEMP_STORE=2",
 					"-DSQLITE_THREADSAFE",
-					"-DSQLCIPHER_CRYPTO_CC",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -679,14 +618,6 @@
 					"\"Flutter\"",
 					"-framework",
 					"\"FlutterPluginRegistrant\"",
-					"-framework",
-					"\"WCDBSwift\"",
-					"-framework",
-					"\"sqflite\"",
-					"-framework",
-					"\"sqlcipher\"",
-					"-framework",
-					"\"sqliterk\"",
 					"-framework",
 					"\"Security\"",
 				);
@@ -721,14 +652,6 @@
 					"\"Flutter\"",
 					"-framework",
 					"\"FlutterPluginRegistrant\"",
-					"-framework",
-					"\"WCDBSwift\"",
-					"-framework",
-					"\"sqflite\"",
-					"-framework",
-					"\"sqlcipher\"",
-					"-framework",
-					"\"sqliterk\"",
 					"-framework",
 					"\"Security\"",
 				);

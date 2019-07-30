@@ -9,17 +9,7 @@
 import UIKit
 import Flutter
 import FlutterPluginRegistrant
-import sqflite
-import WCDBSwift
-import sqflite.Swift
-class SecondViewController: FlutterViewController,SQLiteDatabaseHandler  {
-    func getMessage() -> String {
-        return "SecondViewController"
-    }
-    
-    func getDQLiteDatabase() -> Database {
-        return DBHelper.shared.db
-    }
+class SecondViewController: FlutterViewController  {
 
     let array = ["crs","grs","nrs"]
     let callName = "callNativeMethond"
@@ -30,9 +20,7 @@ class SecondViewController: FlutterViewController,SQLiteDatabaseHandler  {
         self.splashScreenView.backgroundColor = UIColor.blue
         self.splashScreenView.isHidden = true
         print("chash\(self.hash)")
-//        GeneratedPluginRegistrant.register(with: self)
-        SqfliteZPlugin.register(with: self.registrar(forPlugin: "SqfliteZPlugin"))
-        SqfliteZPlugin.registry(with: self)
+        GeneratedPluginRegistrant.register(with: self)
         
 //        GeneratedZPluginRegistrant.init()
 //        SqfliteZPlugin.init()
@@ -55,11 +43,11 @@ class SecondViewController: FlutterViewController,SQLiteDatabaseHandler  {
             }
             if fc.method == strongSelf.array[1] {
                 
-                fr(DBFileUtil.getCurrentDatabasePath())
+//                fr(DBFileUtil.getCurrentDatabasePath())
             }
             if fc.method == strongSelf.callName {
                 //                fr("swift 传值成功")
-                fr(DBFileUtil.getCurrentDatabasePath())
+//                fr(DBFileUtil.getCurrentDatabasePath())
             }
         }
         // Do any additional setup after loading the view.

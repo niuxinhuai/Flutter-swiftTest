@@ -11,10 +11,7 @@ class Config {
   static Color color_white_a80 = Color(0xccffffff);
 
   static Color randomColor() {
-    return Color.fromARGB(
-        255,
-        Random.secure().nextInt(255),
-        Random.secure().nextInt(255),
-        Random.secure().nextInt(255));
+    return Color.fromARGB(255, Random.secure().nextInt(255),
+        Random.secure().nextInt(255), Random.secure().nextInt(255));
   }
 }

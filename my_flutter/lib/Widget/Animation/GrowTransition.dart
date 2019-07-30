@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+//import 'package:my_flutter/section/test/state.dart';
 
 class GrowTransition extends StatelessWidget {
-
   GrowTransition({
     Key key,
     @required this.child,
-    @required this.animation,});
+    @required this.animation,
+  });
 
   final Widget child;
   final Animation<double> animation;
