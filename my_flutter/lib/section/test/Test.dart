@@ -7,6 +7,7 @@ import 'TestModel.dart';
 import 'package:my_flutter/Const/Config.dart';
 import 'package:my_flutter/Expand/Router/Routers.dart';
 import 'basic/page.dart';
+import 'component/page.dart';
 
 class Test extends StatefulWidget {
   @override
@@ -96,6 +97,7 @@ class _TestState extends State<Test> {
     if (type == TestType.basis) {
       selectWidget = BasicPage().buildPage(null);
     } else if (type == TestType.component) {
+      selectWidget = ComponentTestPage().buildPage(null);
     } else if (type == TestType.adapter) {
     } else if (type == TestType.video) {
     } else {}
