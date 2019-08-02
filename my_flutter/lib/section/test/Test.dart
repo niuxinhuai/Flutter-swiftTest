@@ -8,6 +8,7 @@ import 'package:my_flutter/Const/Config.dart';
 import 'package:my_flutter/Expand/Router/Routers.dart';
 import 'basic/page.dart';
 import 'component/page.dart';
+import 'adapter/page.dart';
 
 class Test extends StatefulWidget {
   @override
@@ -99,6 +100,7 @@ class _TestState extends State<Test> {
     } else if (type == TestType.component) {
       selectWidget = ComponentTestPage().buildPage(null);
     } else if (type == TestType.adapter) {
+      selectWidget = AdapterTestPage().buildPage(null);
     } else if (type == TestType.video) {
     } else {}
     Routers.push(context, selectWidget);

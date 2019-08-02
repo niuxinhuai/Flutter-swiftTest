@@ -7,8 +7,8 @@ class Application extends StatefulWidget {
   _ApplicationState createState() => _ApplicationState();
 }
 
-class _ApplicationState extends State<Application> with SingleTickerProviderStateMixin {
-
+class _ApplicationState extends State<Application>
+    with SingleTickerProviderStateMixin {
   PageController _pagecontroller;
   int _page = 0;
 
@@ -30,25 +30,25 @@ class _ApplicationState extends State<Application> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: new PageView(
-        physics: NeverScrollableScrollPhysics(),
-        children: ApplicationModel.tabControllers,
-        controller: _pagecontroller,
-        onPageChanged: onPageValueChanged,
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        items: ApplicationModel.tabArray,
-        currentIndex: _page,
-        type: BottomNavigationBarType.fixed,
-        fixedColor: Config.cBlue,
-        onTap: onTap,
-      )
-    );
+        body: new PageView(
+          physics: NeverScrollableScrollPhysics(),
+          children: ApplicationModel.tabControllers,
+          controller: _pagecontroller,
+          onPageChanged: onPageValueChanged,
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.white,
+          items: ApplicationModel.tabArray,
+          currentIndex: _page,
+          type: BottomNavigationBarType.fixed,
+          fixedColor: Config.cBlue,
+          onTap: onTap,
+        ));
   }
 
   void onTap(int tag) {
-    _pagecontroller.animateToPage(tag, duration: Duration(milliseconds: 1), curve: Curves.easeIn);
+    _pagecontroller.animateToPage(tag,
+        duration: Duration(milliseconds: 1), curve: Curves.easeIn);
   }
 
   void onPageValueChanged(int page) {
