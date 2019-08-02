@@ -14,6 +14,7 @@ class ComponentTestState implements Cloneable<ComponentTestState> {
   }
 }
 
+//初始化
 ComponentTestState initState(Map<String, dynamic> args) {
   var state = ComponentTestState();
   final List<String> li =
@@ -25,6 +26,7 @@ ComponentTestState initState(Map<String, dynamic> args) {
   return state;
 }
 
+//左边组件连接器
 class CatalogueLeftConnector
     extends ConnOp<ComponentTestState, CatalogueLeftState> {
   @override
@@ -40,6 +42,7 @@ class CatalogueLeftConnector
   }
 }
 
+//右边组件连接器
 class CatalogueRightConnector
     extends ConnOp<ComponentTestState, CatalogueRightState> {
   @override

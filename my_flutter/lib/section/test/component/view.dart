@@ -24,6 +24,7 @@ Widget _getBody(
   );
 }
 
+//左视图
 Expanded _getLeft(ViewService viewService) {
   return Expanded(
     flex: 1,
@@ -34,6 +35,7 @@ Expanded _getLeft(ViewService viewService) {
   );
 }
 
+//右视图
 Expanded _getRight(ViewService viewService) {
   return Expanded(
     flex: 3,
