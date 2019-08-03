@@ -18,6 +18,7 @@ DioTestState _onAction(DioTestState state, Action action) {
   return newState;
 }
 
+//接收信号为didFeatch
 DioTestState _didFeatchAction(DioTestState state, Action action) {
   final ExampleModel model = action.payload;
   final DioTestState newState = state.clone();

@@ -21,6 +21,7 @@ void _onOpenWeb(Action action, Context<DioTestState> ctx) {
 }
 
 void _init(Action action, Context<DioTestState> ctx) {
+  //为封装好的post请求，发送信号为didFeatch
   ServiceHepher.getExampleList().then(
       (value) => ctx.dispatch(DioTestActionCreator.didFeatchAction(value)));
 }
