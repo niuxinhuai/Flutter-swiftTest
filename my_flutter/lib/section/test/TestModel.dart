@@ -1,4 +1,4 @@
-enum TestType { basis, component, adapter, video, other }
+enum TestType { basis, component, adapter, dio, video, other }
 
 class TestModel {
   String title;

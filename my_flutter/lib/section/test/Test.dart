@@ -9,6 +9,7 @@ import 'package:my_flutter/Expand/Router/Routers.dart';
 import 'basic/page.dart';
 import 'component/page.dart';
 import 'adapter/page.dart';
+import 'dio/page.dart';
 
 class Test extends StatefulWidget {
   @override
@@ -24,6 +25,7 @@ class _TestState extends State<Test> {
         type: TestType.component),
     TestModel(
         title: 'fish_redux', detailTitle: 'adapter使用', type: TestType.adapter),
+    TestModel(title: 'fish_redux', detailTitle: 'dio使用', type: TestType.dio),
     TestModel(
         title: 'video_player', detailTitle: '基础视频播放', type: TestType.video),
     TestModel(title: '213', detailTitle: '12323', type: TestType.other),
@@ -101,6 +103,8 @@ class _TestState extends State<Test> {
       selectWidget = ComponentTestPage().buildPage(null);
     } else if (type == TestType.adapter) {
       selectWidget = AdapterTestPage().buildPage(null);
+    } else if (type == TestType.dio) {
+      selectWidget = DioTestPage().buildPage(null);
     } else if (type == TestType.video) {
     } else {}
     Routers.push(context, selectWidget);
