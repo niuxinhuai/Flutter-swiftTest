@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter/Util/AnimationUtil.dart';
+import 'package:my_flutter/section/test/web/WebPage.dart';
 
 class Routers {
   static const home = "";
@@ -13,6 +14,13 @@ class Routers {
     }, transitionsBuilder: (BuildContext c, Animation<double> animation,
         Animation<double> sdAnimation, Widget child) {
       return AnimationUtil.transition(animation, child);
+    }));
+  }
+
+  static openWeb(BuildContext context, String url, String title) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (BuildContext context) {
+      return WebPage(webUrl: url, webTitle: title);
     }));
   }
 
